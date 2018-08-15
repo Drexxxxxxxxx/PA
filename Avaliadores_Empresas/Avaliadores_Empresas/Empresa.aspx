@@ -1,27 +1,26 @@
-﻿﻿﻿﻿<%@ Page Language="C#" AutoEventWireup="true" EnableEventValidation="false" CodeBehind="Empresa.aspx.cs" Inherits="Avaliadores_Empresas.Empresa" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Empresa.aspx.cs" Inherits="Avaliadores_Empresas.Empresa" %>
 
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-
-    <title>Empresa</title>
     <link runat="server" rel="icon" href="Imagens/Logos/favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
-    <link rel="stylesheet" type="text/css" href="stylesheets/style_empresa.css" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/style_avaliadores.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <style>
-      
-    </style>
+
+
+    <title>Empresa</title>
 </head>
 <body>
     <form id="form1" runat="server">
         <div>
             <section>
-                <nav class="navbar navbar-inverse" style="z-index: 99999">
+                <nav class="navbar navbar-inverse" style="z-index:99999">
                     <div class="container-fluid">
                         <div class="navbar-header">
+
                             <div style="max-width: 100%;">
                                 <div class="dropdown">
                                     <asp:ImageButton ID="ImageButton1" runat="server" ImageUrl="~/Imagens/Logos/lg_azul.png" Width="70px" />
@@ -110,9 +109,6 @@
                                 <input id="Hidden3" type="hidden" runat="server" />
 
                                 <asp:TextBox ID="TextBox1" runat="server" onkeydown="return (event.keyCode!=13);"></asp:TextBox>
-
-
-                                <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
 
                                 <asp:TextBox runat="server" ID="pacinput" class="form-control" type="text" placeholder="Find Address of conflict &#xF002;" Style="display: none" AutoPostBack="True"></asp:TextBox>
                                 <div id="googleMapZOOM" style="width: 100%; height: 300px;"></div>

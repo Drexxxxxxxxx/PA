@@ -1,22 +1,16 @@
-﻿body {
+﻿
+body {
     background: linear-gradient(to right, #2193b0, #6dd5ed);
-}
-
-.form {
-    margin: auto;
+    height: 100% !important;
+    overflow-x: hidden !important;
+    margin: 0 !important;
+    overflow: auto;
 }
 
 .navbar {
     margin-bottom: 0 !important;
-    border-radius: 0 !important;
-}
-
-body, html, header, form {
-    background: linear-gradient(to right, #2193b0, #6dd5ed);
-    height: 100% !important;
-    overflow-x: hidden !important;
-    overflow-y:hidden !important;
-    margin: 0 !important;
+    margin-top: 0 !important;
+    border-radius: 0px;
 }
 
 .outer-div {

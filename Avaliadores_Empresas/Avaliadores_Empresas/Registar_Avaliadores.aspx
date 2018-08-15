@@ -38,7 +38,7 @@
 
             </div>
         </nav>
-        <div class="outer-div">
+        <div class="container outer-div">
             <div class="inner-div">
                 &nbsp;&nbsp;
                 <div class="row">
@@ -47,123 +47,143 @@
                     </div>
                 </div>
                 &nbsp;
-                <div class="row">
-                    <div class="col-sm-6">
-                        <asp:Label ID="Label3" runat="server" CssClass="LabelPaddingright" Text="Nome"></asp:Label>
-                    </div>
-                    <div class="col-sm-6">
-                        <asp:TextBox ID="nome_aval" CssClass="textboxContactos" runat="server"></asp:TextBox>
-                    </div>
-                </div>
-                &nbsp;
-                <div class="row">
-                    <div class="col-sm-6">
-                        <asp:Label ID="Label4" runat="server" CssClass="LabelPaddingright" Text="Email"></asp:Label>
-                    </div>
-                    <div class="col-sm-6">
-                        <asp:TextBox ID="email_aval" CssClass="textboxContactos" runat="server"></asp:TextBox>
-                    </div>
-                </div>
-                &nbsp;
-                <div class="row">
-                    <div class="col-sm-6">
-                        <asp:Label ID="Label5" runat="server" CssClass="LabelPaddingright" Text="Número de telemóvel"></asp:Label>
-                    </div>
-                    <div class="col-sm-6">
-                        <asp:TextBox ID="mobile_aval" CssClass="textboxContactos" MaxLength="9" runat="server"></asp:TextBox>
-                    </div>
-                </div>
-                &nbsp;
-                <div class="row">
-                    <div class="col-sm-6">
-                        <asp:Label ID="Label6" runat="server" CssClass="LabelPaddingright LabelDescricao" Height="39px" Text="Morada"></asp:Label>
-                    </div>
-                    <div class="col-sm-6">
-                        <asp:TextBox ID="morada_aval" CssClass="textboxContactos" runat="server"></asp:TextBox>
-                    </div>
-                </div>
-                &nbsp;
-                <div class="row">
-                    <div class="col-sm-6">
-                        <asp:Label ID="Label7" runat="server" CssClass="LabelPaddingright LabelDescricao" Height="39px" Text="Area de Atuação"></asp:Label><br />
-
-                    </div>
-                    <div class="col-sm-6">
-                        <asp:Button ID="AddtoListbox" runat="server" OnClick="AddtoListbox_Click" CssClass="buttonsobrenos" Text="Add" />
-                        <asp:DropDownList CssClass="buttonsobrenos" ID="dp_area" runat="server"></asp:DropDownList>
-                        <br />
-                        <br />
-                        <div class="DivsContacto">
-                            <asp:ListBox ID="ListBox1" runat="server" Height="59px" CssClass="listboxcss" Width="132px"></asp:ListBox>
-                            <br />
-                            <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" CssClass="buttonsobrenos" Text="Remover Área Selecionada" />
+                <p></p>
+                <div class="col-sm-6">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <asp:Label ID="Label3" runat="server" CssClass="LabelPaddingright" Height="100%" Text="Nome"></asp:Label>
+                        </div>
+                        <div class="col-sm-6">
+                            <asp:TextBox ID="nome_aval" CssClass="textboxContactos" width="100%" runat="server"></asp:TextBox>
                         </div>
                     </div>
-                </div>
-                &nbsp;
-                <div class="row">
-                    <div class="col-sm-6">
-                        <asp:Label ID="Label12" runat="server" CssClass="LabelPaddingright LabelDescricao" Height="39px" Text="Password"></asp:Label>
+                    &nbsp;
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <asp:Label ID="Label4" runat="server" CssClass="LabelPaddingright" Height="100%" Text="Email"></asp:Label>
+                        </div>
+                        <div class="col-sm-6">
+                            <asp:TextBox ID="email_aval" CssClass="textboxContactos" width="100%" runat="server"></asp:TextBox>
+                        </div>
                     </div>
-                    <div class="col-sm-6">
-                        <asp:TextBox ID="pass_aval" runat="server" CssClass="textboxContactos" TextMode="Password"></asp:TextBox>
+                    &nbsp;
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <asp:Label ID="Label5" runat="server" CssClass="LabelPaddingright" Height="100%" Text="Número de telemóvel"></asp:Label>
+                        </div>
+                        <div class="col-sm-6">
+                            <asp:TextBox ID="mobile_aval" CssClass="textboxContactos" width="100%" MaxLength="9" runat="server"></asp:TextBox>
+                        </div>
+                    </div>
+                    &nbsp;
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <asp:Label ID="Label6" runat="server" CssClass="LabelPaddingright LabelDescricao" Height="100%" Text="Morada"></asp:Label>
+                        </div>
+                        <div class="col-sm-6">
+                            <asp:TextBox ID="morada_aval" CssClass="textboxContactos" width="100%" runat="server"></asp:TextBox>
+                        </div>
+                    </div>
+                    &nbsp;
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <asp:Label ID="Label9" runat="server" CssClass="LabelPaddingright LabelDescricao" Height="100%" Text="Nº Registo"></asp:Label>
+                        </div>
+                        <div class="col-sm-6">
+                            <asp:TextBox ID="nregisto_aval" CssClass="textboxContactos" width="100%" runat="server"></asp:TextBox>
+
+                        </div>
+                    </div>
+                    &nbsp;
+                    
+
+                </div>
+                <div class="col-sm-6">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <asp:Label ID="Label10" runat="server" CssClass="LabelPaddingright LabelDescricao" Height="100%" Text="Apólice Seguro"></asp:Label>
+                        </div>
+                        <div class="col-sm-6">
+                            <asp:TextBox ID="apoliceseguro_aval" CssClass="textboxContactos" width="100%" runat="server"></asp:TextBox>
+
+                        </div>
+                    </div>
+                    &nbsp;
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <asp:Label ID="Label11" runat="server" CssClass="LabelPaddingright LabelDescricao" Height="100%" Text="Validade do Apólice de Seguro"></asp:Label>
+                        </div>
+                        <div class="col-sm-6">
+                            <asp:TextBox ID="validseguro_aval" CssClass="textboxContactos" width="100%" TextMode="Date" runat="server"></asp:TextBox>
+
+                        </div>
+                    </div>
+                    &nbsp;
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <asp:Label ID="Label7" runat="server" CssClass="LabelPaddingright LabelDescricao" Height="100%" Text="Area de Atuação"></asp:Label><br />
+
+                        </div>
+                        <div class="col-sm-6">
+                            <asp:DropDownList CssClass="buttonsobrenos" ID="dp_area" runat="server"></asp:DropDownList>
+                            <asp:Button ID="AddtoListbox" runat="server" OnClick="AddtoListbox_Click" CssClass="buttonsobrenos" Text="Add" />
+                            <br />
+                            <br />
+
+                        </div>
+
+                        <div class="col-sm-6">
+                            <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" CssClass="buttonsobrenos" Text="Remover Área Selecionada" />
+
+                        </div>
+                        <div class="col-sm-6">
+                            <asp:ListBox ID="ListBox1" runat="server" Height="59px" CssClass="listboxcss" Width="86%"></asp:ListBox>
+
+                        </div>
+                        <br />
 
                     </div>
-                </div>
-                &nbsp; 
-                <div class="row">
-                    <div class="col-sm-6">
-                        <asp:Label ID="Label8" runat="server" CssClass="LabelPaddingright LabelDescricao" Height="39px" Text="Confirmar Password"></asp:Label>
-                    </div>
-                    <div class="col-sm-6">
-                        <asp:TextBox ID="confpass_aval" runat="server" CssClass="textboxContactos" TextMode="Password"></asp:TextBox>
-
-                    </div>
+                    &nbsp;
                 </div>
                 &nbsp;
-                <div class="row">
+                <div class="container row">
                     <div class="col-sm-6">
-                        <asp:Label ID="Label9" runat="server" CssClass="LabelPaddingright LabelDescricao" Height="39px" Text="Nº Registo"></asp:Label>
-                    </div>
-                    <div class="col-sm-6">
-                        <asp:TextBox ID="nregisto_aval" CssClass="textboxContactos" runat="server"></asp:TextBox>
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <asp:Label ID="Label12" runat="server" CssClass="LabelPaddingright LabelDescricao" Height="100%" Text="Password"></asp:Label>
+                            </div>
+                            <div class="col-sm-6">
+                                <asp:TextBox ID="pass_aval" runat="server" CssClass="textboxContactos" width="100%" TextMode="Password"></asp:TextBox>
 
-                    </div>
-                </div>
-                &nbsp;
-                <div class="row">
-                    <div class="col-sm-6">
-                        <asp:Label ID="Label10" runat="server" CssClass="LabelPaddingright LabelDescricao" Height="39px" Text="Apólice Seguro"></asp:Label>
+                            </div>
+                        </div>
+                        &nbsp; 
                     </div>
                     <div class="col-sm-6">
-                        <asp:TextBox ID="apoliceseguro_aval" CssClass="textboxContactos" runat="server"></asp:TextBox>
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <asp:Label ID="Label8" runat="server" CssClass="LabelPaddingright LabelDescricao" Height="100%" Text="Confirmar Password"></asp:Label>
+                            </div>
+                            <div class="col-sm-6">
+                                <asp:TextBox ID="confpass_aval" runat="server" CssClass="textboxContactos" width="100%" TextMode="Password"></asp:TextBox>
 
+                            </div>
+                        </div>
+                        &nbsp;
                     </div>
+                    &nbsp;
                 </div>
-                &nbsp;
-                <div class="row">
-                    <div class="col-sm-6">
-                        <asp:Label ID="Label11" runat="server" CssClass="LabelPaddingright LabelDescricao" Height="100%" Text="Validade do Apólice de Seguro"></asp:Label>
-                    </div>
-                    <div class="col-sm-6">
-                        <asp:TextBox ID="validseguro_aval" CssClass="textboxContactos" TextMode="Date" runat="server"></asp:TextBox>
 
-                    </div>
-                </div>
-                &nbsp;
                 <div class="row">
-                    <div class="col-sm-6">
+                    <div class="col-sm-12" style="text-align: center">
                         <asp:Button ID="btn_regist_Aval" runat="server" CssClass="buttonsobrenos" OnClick="btn_regist_Aval_Click" Text="Registar" />
                     </div>
-                    <div class="col-sm-6">
-                    </div>
+
                 </div>
                 <p></p>
                 &nbsp;
             </div>
-
         </div>
-
     </form>
 </body>
 </html>

@@ -109,6 +109,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Charge.aspx" />
+    <Content Include="Empresa.aspx" />
     <Content Include="ExcelFileEdited\info.txt" />
     <Content Include="ExcelFileOriginal\Formulario.xlsx" />
     <None Include="packages.config" />
@@ -123,7 +124,6 @@
   <ItemGroup>
     <Content Include="Avaliador.aspx" />
     <Content Include="Contactos.aspx" />
-    <Content Include="Empresa.aspx" />
     <Content Include="Global.asax" />
     <Content Include="Homepagebottstrap.aspx" />
     <Content Include="imagemfundo.jpg" />
@@ -172,6 +172,7 @@
     <Content Include="Imagens\Logos\lg_preto.png" />
     <Content Include="Login.aspx" />
     <Content Include="logo.jpeg" />
+    <Content Include="Manuntencao.aspx" />
     <Content Include="PaginaTestePaypal.aspx" />
     <Content Include="PublicarPedidoAvaliacao1.aspx" />
     <Content Include="PublicarPedidoAvaliacao2.aspx" />
@@ -237,6 +238,13 @@
     </Compile>
     <Compile Include="Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manuntencao.aspx.cs">
+      <DependentUpon>Manuntencao.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manuntencao.aspx.designer.cs">
+      <DependentUpon>Manuntencao.aspx</DependentUpon>
     </Compile>
     <Compile Include="PaginaTestePaypal.aspx.cs">
       <DependentUpon>PaginaTestePaypal.aspx</DependentUpon>

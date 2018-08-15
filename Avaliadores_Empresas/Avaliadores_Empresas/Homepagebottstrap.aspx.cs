@@ -16,7 +16,12 @@ namespace Avaliadores_Empresas
 
         protected void ImageButton1_Click(object sender, ImageClickEventArgs e)
         {
-            myDropdown.Visible = true;
+          
+        }
+
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("SobreNos.aspx");
         }
     }
 }

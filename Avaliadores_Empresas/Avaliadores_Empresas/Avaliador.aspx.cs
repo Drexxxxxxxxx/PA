@@ -14,43 +14,43 @@ namespace Avaliadores_Empresas
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            //if (!IsPostBack)
-            //{
-            //    // Saber se é Avaliador ?
-            //    string constr = ConfigurationManager.ConnectionStrings["connString"].ConnectionString;
-            //    // Codigo para registar
-            //    MySqlConnection con = new MySqlConnection(constr);
-            //    con.Open();
-            //   string N_Avaliador = "SELECT * from tblavaliador where id = @id";
-            //    MySqlCommand comand = new MySqlCommand(N_Avaliador);
-            //    try
-            //    {
-            //        comand.Parameters.AddWithValue("@id", Session["idAvaliador"].ToString());
-            //    }
-            //    catch
-            //    {
-            //        Response.Redirect("Login.aspx");
-            //    }
-            //    comand.Connection = con;
-            //    comand.ExecuteNonQuery();
+            if (!IsPostBack)
+            {
+                // Saber se é Avaliador ?
+                string constr = ConfigurationManager.ConnectionStrings["connString"].ConnectionString;
+                // Codigo para registar
+                MySqlConnection con = new MySqlConnection(constr);
+                con.Open();
+                string N_Avaliador = "SELECT * from tblavaliador where id = @id";
+                MySqlCommand comand = new MySqlCommand(N_Avaliador);
+                try
+                {
+                    comand.Parameters.AddWithValue("@id", Session["idAvaliador"].ToString());
+                }
+                catch
+                {
+                    Response.Redirect("Login.aspx");
+                }
+                comand.Connection = con;
+                comand.ExecuteNonQuery();
 
-            //    MySqlDataReader read = comand.ExecuteReader();
-            //    //SE EXISTIR ELE ENTRA NO IF
-            //    if (read.Read())
-            //    {
-            //        TxtPerfilNRegisto.Text = read[0].ToString();
-            //        TxtPerfilNome.Text = read[1].ToString();
-            //        TxtPerfilEmail.Text = read[3].ToString();
-            //        TxtPerfilTelemovel.Text = read[4].ToString();
-            //        TxtPerfilApoliceSeguro.Text = read[5].ToString();
-            //        DateTime myDate = DateTime.Parse(read[6].ToString());
-            //        TxtPerfilValidadeApolice.Text = myDate.ToString("yyyy-MM-dd");
-            //        TxtPerfilMorada.Text = read[7].ToString();
-            //    }
-            //    con.Close();
-            //    bindddl();
-            //    binLbox();
-            //}
+                MySqlDataReader read = comand.ExecuteReader();
+                //SE EXISTIR ELE ENTRA NO IF
+                if (read.Read())
+                {
+                    TxtPerfilNRegisto.Text = read[0].ToString();
+                    TxtPerfilNome.Text = read[1].ToString();
+                    TxtPerfilEmail.Text = read[3].ToString();
+                    TxtPerfilTelemovel.Text = read[4].ToString();
+                    TxtPerfilApoliceSeguro.Text = read[5].ToString();
+                    DateTime myDate = DateTime.Parse(read[6].ToString());
+                    TxtPerfilValidadeApolice.Text = myDate.ToString("yyyy-MM-dd");
+                    TxtPerfilMorada.Text = read[7].ToString();
+                }
+                con.Close();
+                bindddl();
+                binLbox();
+            }
         }
 
         protected void BtnPerfil_Click(object sender, EventArgs e)

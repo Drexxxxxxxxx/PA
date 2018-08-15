@@ -80,7 +80,7 @@ namespace Avaliadores_Empresas
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            if(!IsPostBack)
+            if (!IsPostBack)
             {
                 bindddl();
             }

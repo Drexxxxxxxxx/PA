@@ -31,64 +31,64 @@ namespace Avaliadores_Empresas
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            //// Saber se é Avaliador ?
-            //if (!IsPostBack)
-            //{
-            //    string constr = ConfigurationManager.ConnectionStrings["connString"].ConnectionString;
-            //    // Codigo para registar
-            //    MySqlConnection con = new MySqlConnection(constr);
-            //    con.Open();
-            //    string N_Avaliador = "SELECT * from TblEmpresa where id = @id";
-            //    MySqlCommand comand = new MySqlCommand(N_Avaliador);
-            //    try
-            //   {
-            //       comand.Parameters.AddWithValue("@id", Session["idAvaliador"].ToString());
-            //    }
-            //    catch
-            //    {
-            //        Response.Redirect("Login.aspx");
-            //    }
-            //    comand.Connection = con;
-            //    comand.ExecuteNonQuery();
+            //Saber se é Avaliador ?
+            if (!IsPostBack)
+            {
+                string constr = ConfigurationManager.ConnectionStrings["connString"].ConnectionString;
+                // Codigo para registar
+                MySqlConnection con = new MySqlConnection(constr);
+                con.Open();
+                string N_Avaliador = "SELECT * from TblEmpresa where id = @id";
+                MySqlCommand comand = new MySqlCommand(N_Avaliador);
+                try
+                {
+                    comand.Parameters.AddWithValue("@id", Session["idAvaliador"].ToString());
+                }
+                catch
+                {
+                    Response.Redirect("Login.aspx");
+                }
+                comand.Connection = con;
+                comand.ExecuteNonQuery();
 
-            //    MySqlDataReader read = comand.ExecuteReader();
-            //    //SE EXISTIR ELE ENTRA NO IF
-            //    if (read.Read())
-            //    {
-            //        TBoxPerfilNRegisto.Text = read[0].ToString();
-            //        TBoxPerfilNome.Text = read[1].ToString();
-            //        TBoxPerfilEmail.Text = read[3].ToString();
-            //        TBoxPerfilTelefone.Text = read[4].ToString();
-            //        TBoxPerfilApoliceSeguro.Text = read[5].ToString();
-            //        DateTime myDate = DateTime.Parse(read[6].ToString());
-            //        TBoxPerfilValidadeApolice.Text = myDate.ToString("yyyy-MM-dd");
-            //        TBoxPerfilMorada.Text = read[7].ToString();
-            //    }
-            //    con.Close();
-                
-
-            //    DataTable dt = this.GetData("selectallAvaliadoresMorada");
-
-            //    id = new string[dt.Columns.Count];
+                MySqlDataReader read = comand.ExecuteReader();
+                //SE EXISTIR ELE ENTRA NO IF
+                if (read.Read())
+                {
+                    TBoxPerfilNRegisto.Text = read[0].ToString();
+                    TBoxPerfilNome.Text = read[1].ToString();
+                    TBoxPerfilEmail.Text = read[3].ToString();
+                    TBoxPerfilTelefone.Text = read[4].ToString();
+                    TBoxPerfilApoliceSeguro.Text = read[5].ToString();
+                    DateTime myDate = DateTime.Parse(read[6].ToString());
+                    TBoxPerfilValidadeApolice.Text = myDate.ToString("yyyy-MM-dd");
+                    TBoxPerfilMorada.Text = read[7].ToString();
+                }
+                con.Close();
 
 
-            //    DataRow drid = dt.Rows[0];
+                DataTable dt = this.GetData("selectallAvaliadoresMorada");
+
+                id = new string[dt.Columns.Count];
 
 
-            //    for (int i = 0; i < drid.ItemArray.Length; i++)
-            //    {
-            //        id[i] = drid[i].ToString();
-            //    }
+                DataRow drid = dt.Rows[0];
 
-            //    rptMarkers.DataSource = dt;
-            //    rptMarkers.DataBind();
 
-            //    rptMarkers2.DataSource = dt;
-            //    rptMarkers2.DataBind();
+                for (int i = 0; i < drid.ItemArray.Length; i++)
+                {
+                    id[i] = drid[i].ToString();
+                }
 
-            //    rptMarkers3.DataSource = dt;
-            //    rptMarkers3.DataBind();
-            //}
+                rptMarkers.DataSource = dt;
+                rptMarkers.DataBind();
+
+                rptMarkers2.DataSource = dt;
+                rptMarkers2.DataBind();
+
+                rptMarkers3.DataSource = dt;
+                rptMarkers3.DataBind();
+            }
         }
 
         private DataTable GetData(string query)
@@ -284,7 +284,7 @@ namespace Avaliadores_Empresas
 
         }
 
- 
+
 
     }
 }
